@@ -17,7 +17,7 @@ jobs:
         run: docker-compose -f docker-compose.yml up -d
 
       - name: Run Cypress tests
-        run: docker-compose -f docker-compose.yml run cypress npm run test
+        run: docker-compose -f docker-compose.yml run cypress-tests npm run test
 
       - name: Stop Docker Compose services
         run: docker-compose -f docker-compose.yml down
