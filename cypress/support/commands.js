@@ -32,4 +32,11 @@ Cypress.Commands.add('customClick', { prevSubject: true }, (subject) => {
   Cypress.Commands.add('customType', { prevSubject: true }, (subject, text) => {
     cy.wrap(subject).clear().type(text);
   });
+
+  Cypress.Commands.add('shadowElement', { prevSubject: true }, (subject, locator) => {
+    return cy.get('my-form').shadow().find(locator).get();
+
+
+  });
+  
   

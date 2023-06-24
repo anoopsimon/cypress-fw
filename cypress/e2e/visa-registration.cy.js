@@ -38,4 +38,5 @@ describe('Visa Registration Form Tests', () => {
       cy.screenshot();
     });
 
+
 });
