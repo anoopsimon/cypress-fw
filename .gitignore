@@ -1,3 +1,6 @@
 /node_modules
 *.mp4
 *.png
+cypress/reports
+cypress/screenshot
+cypress/downloads

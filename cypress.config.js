@@ -3,15 +3,17 @@ const fs = require('fs')
 
 
 module.exports = defineConfig({
+  reporter: 'cypress-mochawesome-reporter',
 
   // setupNodeEvents can be defined in either
   // the e2e or component configuration
   e2e: {
     setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on);
       on('after:screenshot', (details) => {
         console.log('Capturing screenshot') // print all details to terminal
 
-        const newPath = 'cypress/downloads/screenshot.png'
+        const newPath = 'cypress/reports/screenshot.png'
 
         return new Promise((resolve, reject) => {
           // fs.rename moves the file to the existing directory 'new/path/to'
