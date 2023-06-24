@@ -4,6 +4,7 @@
     "countrySelect": "#country",
     "purposeTextArea": "#purpose",
     "genderMaleRadio": "#genderMale",
+    "genderFemaleRadio": "#genderFemale",
     "visaTypeTouristCheckbox": "#visaTypeTourist",
     "visaTypeBusinessCheckbox": "#visaTypeBusiness",
     "submitButton": "form button[type='submit']",

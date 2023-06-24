@@ -1,0 +1,10 @@
+version: '3'
+services:
+  cypress-tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - ./cypress/reports:/app/cypress/reports
