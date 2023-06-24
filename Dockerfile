@@ -15,4 +15,4 @@ RUN npm ci
 COPY . .
 
 # Run Cypress tests
-CMD ["npm", "run", "cypress"]
+CMD ["npm", "run", "test"]
