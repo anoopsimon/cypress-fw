@@ -1,5 +1,8 @@
 import locators from '../fixtures/locators.json'
 
+Cypress._.times(10, () => {
+  
+
 describe('Visa Registration Form Tests', () => {
   
   it('Fill visa application form and validates success message', () => {
@@ -40,3 +43,5 @@ describe('Visa Registration Form Tests', () => {
 
 
 });
+
+  });
