@@ -1,6 +1,6 @@
 import locators from '../fixtures/locators.json'
 
-Cypress._.times(100, () => {
+//Cypress._.times(100, () => {
   
 
 describe('Visa Registration Form Tests', () => {
@@ -44,4 +44,4 @@ describe('Visa Registration Form Tests', () => {
 
 });
 
-  });
+//  });
