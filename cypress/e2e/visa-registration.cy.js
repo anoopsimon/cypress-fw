@@ -6,7 +6,7 @@ import locators from '../fixtures/locators.json'
 describe('Visa Registration Form Tests', () => {
   
   it('Fill visa application form and validates success message', () => {
-    cy.visit('cypress/test.html');
+    cy.visit(Cypress.env('appUrl'));
 
     cy.get(locators.fullNameInput).clear().type('John Doe');
     cy.get(locators.passportNumberInput).clear().type('ABC123456');
@@ -26,7 +26,7 @@ describe('Visa Registration Form Tests', () => {
     });
 
     it('Should display all the HTML controls', () => {
-      cy.visit('cypress/test.html');
+      cy.visit(Cypress.env('appUrl'));
 
       // Verify the visibility of each control using locators
       cy.get(locators.fullNameInput).should('be.visible');

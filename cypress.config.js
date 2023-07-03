@@ -3,6 +3,9 @@ const fs = require('fs')
 
 
 module.exports = defineConfig({
+  env:{
+    appUrl:'cypress/test.html'
+  },
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     charts: true,
