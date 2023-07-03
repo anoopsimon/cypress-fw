@@ -1,4 +1,5 @@
 import locators from '../fixtures/locators.json'
+import { faker } from '@faker-js/faker';
 
 //Cypress._.times(100, () => {
   
@@ -8,10 +9,10 @@ describe('Visa Registration Form Tests', () => {
   it('Fill visa application form and validates success message', () => {
     cy.visit(Cypress.env('appUrl'));
 
-    cy.get(locators.fullNameInput).clear().type('John Doe');
-    cy.get(locators.passportNumberInput).clear().type('ABC123456');
+    cy.get(locators.fullNameInput).clear().type(faker.internet.userName());
+    cy.get(locators.passportNumberInput).clear().type(faker.company.name());
     cy.get(locators.countrySelect).select('USA');
-    cy.get(locators.purposeTextArea).clear().type('Tourism');
+    cy.get(locators.purposeTextArea).clear().type(faker.company.name());
     cy.get(locators.genderMaleRadio).click({ force: true });
     cy.get(locators.visaTypeTouristCheckbox).click({ force: true });
 
